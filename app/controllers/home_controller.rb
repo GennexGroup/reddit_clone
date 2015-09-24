@@ -4,23 +4,26 @@ class HomeController < ApplicationController
 
     link1 = {
      title:'The Best Search Engine Ever',
-     url: 'www.google.com',
+     url: 'http://www.google.com',
      user: 'akkurji',
-     date: Time.now
+     date: Time.now,
+     imgtype: "cats"
     }
 
     link2 = {
      title:'The Worst Search Engine Ever',
-     url: 'www.bing.com',
+     url: 'http://www.bing.com',
      user: 'travis',
-     date: Time.now
+     date: Time.now,
+     imgtype: "business"
     }
 
     link3 = {
      title:'The best promo company ever',
-     url: 'www.brandnex.com',
+     url: 'http://www.brandnex.com',
      user: 'niti',
-     date: Time.now
+     date: Time.now,
+     imgtype: "nightlife"
     }
 
     @cool_links.push(link1)

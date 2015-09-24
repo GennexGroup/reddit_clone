@@ -1,33 +1,13 @@
 <h1> Index Page </h1>
 
-<div class='link_listing'>
-  <img src='http://lorempixel.com/100/100/'>
-    <div>
-      <h3> <a href="https://www.google.com"> Cool link 2 somewhere </a> </h3>
-      <p>submitted by akkurji on september 22, 2015</p>
-    </div>
-</div>
+<%@cool_links.each do |lnk|%>
+
 
 <div class='link_listing'>
-  <img src='http://lorempixel.com/100/100/'>
+  <img src='<%="http://lorempixel.com/100/100/#{lnk[:imgtype]}"%>'>
     <div>
-      <h3> <a href="https://www.google.com"> Title </a> </h3>
-      <p>submitted by akkurji on september 22, 2015</p>
+      <h3> <a href="<%=lnk[:url]%>"> <%=lnk[:title]%> </a> </h3>
+      <p>submitted by <%=lnk[:user]%> on <%=lnk[:date]%></p>
     </div>
 </div>
-
-<div class='link_listing'>
-  <img src='http://lorempixel.com/100/100/'>
-    <div>
-      <h3> <a href="https://www.google.com"> Title </a> </h3>
-      <p>submitted by akkurji on september 22, 2015</p>
-    </div>
-</div>
-
-<div class='link_listing'>
-  <img src='http://lorempixel.com/100/100/'>
-    <div>
-      <h3> <a href="https://www.google.com"> Title </a> </h3>
-      <p>submitted by akkurji on september 22, 2015</p>
-    </div>
-</div>
+<%end%>
